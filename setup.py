@@ -6,7 +6,7 @@ long_description = (this_directory / 'README.md').read_text()
   
 setup(
     name = 'rdx',
-    version = '0.9',
+    version = '0.9.1',
     description = 'Radix conversion module.',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
@@ -18,6 +18,7 @@ setup(
     py_modules = ['rdx'],
     url = 'https://github.com/goessl/rdx',
     python_requires = '>=3.0',
+    install_requires = ['sympy'],
     
     classifiers = [
         'Development Status :: 3 - Alpha',

@@ -10,9 +10,10 @@ pip install rdx
 
 ## Usage
 
-This module provides two functions:
-- `to_digits(n, b=10)` to convert a number into a digit representation and
-- `from_digits(d, b=10)` to retrieve a number from a digit representation.
+This module provides the following functions:
+- `to_digits(n, b=10)` to convert a number into a digit representation,
+- `from_digits(d, b=10)` to retrieve a number from a digit representation and
+- `len_digits(n, b=10)` to calculate how many digits will be needed.
 ```python
 >>> from rdx import *
 >>> to_digits(42, 2)
@@ -21,6 +22,8 @@ This module provides two functions:
 [10, 2]
 >>> from_digits([27, 1], 42)
 69
+>>> len_digits(1024, 2)
+11
 ```
 As a digit representation a list with integers is used, where every element
 represents a digit, all ordered in ascending positions.

@@ -1,4 +1,5 @@
 from functools import reduce
+from sympy import log
 
 
 
@@ -22,3 +23,13 @@ def from_digits(d, b=10):
     
     #https://stackoverflow.com/a/21782279/7367030
     return reduce(lambda n, y: b*n+y, reversed(d), 0)
+
+
+def len_digits(n, b=10):
+    assert isinstance(n, int) and n>=0
+    assert isinstance(b, int) and b>=2
+    
+    #https://stackoverflow.com/a/2189827
+    #Sympy because of rounding errors see comments of
+    #https://stackoverflow.com/a/28883802/7367030
+    return int(log(n, b))+1 if n else 0
