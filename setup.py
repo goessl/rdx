@@ -6,7 +6,7 @@ long_description = (this_directory / 'README.md').read_text()
   
 setup(
     name = 'rdx',
-    version = '0.9.1',
+    version = '0.9.2',
     description = 'Radix conversion module.',
     long_description = long_description,
     long_description_content_type = 'text/markdown',

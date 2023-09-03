@@ -26,6 +26,7 @@ def from_digits(d, b=10):
 
 
 def len_digits(n, b=10):
+    """Returns the amount of digits number n represented in base b needs."""
     assert isinstance(n, int) and n>=0
     assert isinstance(b, int) and b>=2
     
