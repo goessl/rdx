@@ -27,7 +27,8 @@ def digits_to_int(d, b=10):
 
 
 def int_to_len_digits(n, b=10):
-    """Returns the amount of digits number n represented in base b needs."""
+    """Returns the amount of digits
+    the number n represented in base b needs."""
     assert isinstance(n, int) and n>=0
     assert isinstance(b, int) and b>=2
     
@@ -39,23 +40,23 @@ def int_to_len_digits(n, b=10):
 
 
 def digits_to_characters(d, alphabet=digits+ascii_letters):
-    """Converts integer digits to characters of the given alphabet."""
+    """Converts integer digits d to characters of the given alphabet."""
     assert all(isinstance(i, int) and 0<=i<len(alphabet) for i in d)
     return [alphabet[i] for i in d]
 
 def characters_to_digits(s, alphabet=digits+ascii_letters):
-    """Converts characters of the given alphabet to integer digits."""
+    """Converts characters s of the given alphabet to integer digits."""
     assert all(isinstance(c, str) and len(c)==1 and c in alphabet for c in s)
     return [alphabet.index(c) for c in s]
 
 
 def digits_to_string(d, alphabet=digits+ascii_letters):
-    """Converts integer digits
+    """Converts integer digits d
     to a right-to-left string in the given alphabet."""
     return ''.join(reversed(digits_to_characters(d, alphabet)))
 
 def string_to_digits(s, alphabet=digits+ascii_letters):
-    """Converts a right-to-left string in the given alphabet
+    """Converts a right-to-left string s in the given alphabet
     to integer digits."""
     #wrap reversed(s), iterator -> iterable, so it won't get exhausted
     return characters_to_digits(list(reversed(s)), alphabet)
