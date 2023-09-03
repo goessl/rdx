@@ -6,7 +6,7 @@ long_description = (this_directory / 'README.md').read_text()
   
 setup(
     name = 'rdx',
-    version = '0.9.2',
+    version = '1.0',
     description = 'Radix conversion module.',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
@@ -21,7 +21,7 @@ setup(
     install_requires = ['sympy'],
     
     classifiers = [
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Intended Audience :: Education',
         'Intended Audience :: Information Technology',
