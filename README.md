@@ -90,6 +90,9 @@ using floating point arithmetic
 [`sympy.log`](https://docs.sympy.org/latest/modules/functions/elementary.html#sympy.functions.elementary.exponential.log)
 is used, adding a hefty overhead. A comparison for time critical applications:
 ![png](https://raw.githubusercontent.com/goessl/rdx/main/readme_nudes/int_to_len_digits_runtime.png)
+(integers with just 3s were choosen because random values introduce to much
+noise and because 100... seemed to risky for a systematic error and 33... lies
+exactly between those 100...s on a logarithmic scale)
 
 ## TODO
 
